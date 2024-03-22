@@ -1,21 +1,17 @@
 import { test, expect } from '@playwright/test';
 
-
 test.use({ 
     locale: 'pt-BR',
     headless: true
-  });
-
+  })
 
 test.beforeEach(async ({ page }) => {
     global.page = page
-});
+})
 
 test.afterEach(async ({ page }) => {
     await page.close();
-});
-
-
+})
 
 test('Validar tela principal da amazon', async () => {
 
@@ -36,8 +32,6 @@ test('Validar tela principal da amazon', async () => {
         
         await expect(logoElement).toBeVisible();
         await expect(searchInput).toBeVisible();
-        await expect(searchButton).toBeVisible();
-        
+        await expect(searchButton).toBeVisible();  
     })
-
 });
