@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 
-test.use({ 
-    locale: 'pt-BR',
-    headless: true
-  })
+// test.use({ 
+//     locale: 'pt-BR',
+//     headless: true
+//   })
 
 test.beforeEach(async ({ page }) => {
     global.page = page
